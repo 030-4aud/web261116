@@ -12,7 +12,7 @@ const movies = [
         title: "A.I. (Artificial Intelligence)", 
         year: 2001, 
         date: "2001-06-29",
-        rating: 7.0, 
+        rating: 7.0,
         poster: "https://image.tmdb.org/t/p/w342/v5URBLEZCtICf0DsnEztdrAs4dD.jpg"
     },
     {
