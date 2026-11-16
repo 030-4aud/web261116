@@ -49,19 +49,21 @@
 
 // renderCards : 영화 배열 ⇒ 보드에 카드 생성(반환값 없음)
 function renderCards(list) {
-    const board = document.querySelector(".board");
+    const board = document.querySelector("#board");
     board.innerHTML = "";
     for (const m of list) {
         const card = document.createElement("article");
         card.className = "card";
-        if (m.rating >= 8) { card.classList.add("hot"); }
+        if (m.rating >= 8) {
+            card.classList.add("hot");
+        }
         card.innerHTML = `
- <img class="poster" src="${posterUrl(m.poster, "w342")}" alt="${m.title} 포스터">
- <span class="badge">${m.rating}</span>
- <div class="info">
- <h2>${m.title}</h2>
- <p class="year">${m.year}</p>
- </div>`;
+                <img class="poster" src="${posterUrl(m.poster, "w342")}" alt="${m.title} 포스터">
+                <span class="badge">${m.rating}</span>
+                <div class="info">
+                <h2>${m.title}</h2>
+                <p class="year">${m.year}</p>
+                </div>`;
         board.appendChild(card);
     }
     document.getElementById("count").textContent = list.length + "편";
