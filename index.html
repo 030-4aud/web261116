@@ -36,9 +36,12 @@
                 <p id="count"></p>
                 <label for="sort">정렬</label>
                 <select id="sort" onchange="applySort()">
-                    <option value="rating">평점 높은 순</option>
-                    <option value="year">최신 개봉순</option>
-                    <option value="title">제목순</option>
+                    <option value="rating_r">평점 높은 순</option>
+                    <option value="rating">평점 낮은 순</option>
+                    <option value="year_r">최신 개봉 순</option>
+                    <option value="year">오래된 개봉 순</option>
+                    <option value="title">제목 순</option>
+                    <option value="title_r">제목 역행 순</option>
                 </select>
             </div>
             <div class="board" id="board">
