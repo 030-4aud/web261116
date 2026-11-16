@@ -24,12 +24,12 @@ const filterByRating = (list, min) => {
 }
 console.log("8점 이상:", filterByRating(movies, 8).length + "편");
 
-//영화 배열 ⇒ 평점 높은 순으로 정렬한 새 배열(원본은 그대로)
-const sortByRating = (list) => {
-    return [...list].sort((a, b) => b.rating - a.rating);
-}
-const sorted = sortByRating(movies);
-console.log("정렬 1위:", sorted[0].title, "/ 원본 1번:", movies[0].title);
+// //영화 배열 ⇒ 평점 높은 순으로 정렬한 새 배열(원본은 그대로)
+// const sortByRating = (list) => {
+//     return [...list].sort((a, b) => b.rating - a.rating);
+// }
+// const sorted = sortByRating(movies);
+// console.log("정렬 1위:", sorted[0].title, "/ 원본 1번:", movies[0].title);
 
 //날짜 문자열 ⇒ 올해까지 몇 년(숫자)
 const yearsSince = (dateStr) => {
@@ -55,7 +55,7 @@ function renderCards(list) {
         }
         card.innerHTML = `
                 <img class="poster" src="${posterUrl(m.poster, "w342")}" alt="${m.title} 포스터">
-                <span class="badge">${m.rating}</span>
+                <span class="badge">${m.rating.toFixed(1)}</span>
                 <div class="info">
                 <h2>${m.title}</h2>
                 <p class="year">${m.year}</p>
